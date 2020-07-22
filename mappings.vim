@@ -1,8 +1,12 @@
+" Clear Search Mark
+nnoremap <leader><space> :noh<cr>
 
 " Format-mappings
 :autocmd FileType javascript,typescirpt,html,css,less,sass,scss,vue,markdown,yaml,json nnoremap <leader>f :Prettier<CR>
 :autocmd FileType dart nnoremap <leader>f :FormatCode<CR>
 
+" Auto Indent in HTML Tags
+inoremap <C-c> <CR><tab><CR><C-o>k<tab>
 
 " NerdTree
 map <f3> :NERDTreeToggle <CR>
@@ -14,20 +18,18 @@ map ds :FZF<CR>
 
 
 " some file commands
-
+" Selecting all text in a file
+nnoremap <C-A> ggVG
 " Saving a file
 map s :w <CR>
 " redo
 map r :redo <CR>
-" Exiting file with saving the content
-map xs :wq <CR>
-" Exiting file without saving the content
-map xx :q! <CR>
-" Exiting
-map xt :q <CR>j
+" Exiting buffer , error if changes not saved
+map xt :bd <CR>
+" Exiting buffer , no error if changes not saved
+map xx :bd! <CR>
 " Esc shortcut
 imap jk <ESC>
-
 
 " switching windows
 nnoremap <C-J> <C-W>j
@@ -59,12 +61,12 @@ noremap <M-9> 9gt
 
 
 " flutter mappings
-map fe :CocCommand flutter.emulators<CR>
-map fr :CocCommand flutter.run<CR>
-map fq :CocCommand flutter.dev.quit<CR>
-map fhr :CocCommand flutter.dev.hotReload<CR>
-map fhR :CocCommand flutter.dev.hotRestart<CR>
-map fdl :call OpenFlutterLog()<CR>
+map <leader>fe :CocCommand flutter.emulators<CR>
+map <leader>fr :CocCommand flutter.run<CR>
+map <leader>fq :CocCommand flutter.dev.quit<CR>
+map <leader>fhr :CocCommand flutter.dev.hotReload<CR>
+map <leader>fhR :CocCommand flutter.dev.hotRestart<CR>
+map <leader>fdl :call OpenFlutterLog()<CR>
 
 
 " autoreloading config file
@@ -109,3 +111,6 @@ nnoremap <leader>sw <C-W><C-x>
 " Home and End of current line
 map <leader>b <Home>
 map <leader>e <End>
+
+" Paste Toogle
+set pastetoggle=<F4>

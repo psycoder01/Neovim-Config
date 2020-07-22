@@ -30,6 +30,9 @@ let g:comfortable_motion_scroll_up_key = "k"
 " Rainbow-brackets
 let g:rainbow_active = 1
 
+" Indent GuideLines
+let g:indentLine_color_term = 8
+let g:indentLine_char = '|'
 
-" sparkup-settings
-autocmd FileType javascript runtime ftplugin/html/sparkup.vim
+" Emmet Default Key Map
+let g:user_emmet_leader_key='<C-E>'

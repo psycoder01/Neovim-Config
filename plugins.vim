@@ -3,11 +3,16 @@ call plug#begin('~/.config/nvim/plugged')
 " JavaScript Plugin
 Plug 'pangloss/vim-javascript'
 
-" Tag completion
-Plug 'rstacruz/sparkup', {'rtp': 'vim/'}  
-
-" React Plugin
+" Jsx Pretty
+Plug 'HerringtonDarkholme/yats.vim'
+" or Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
+
+" Emmet
+Plug 'mattn/emmet-vim'
+
+" Indent GuideLines
+Plug 'Yggdroot/indentLine'
 
 " Prettier PLugin
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
@@ -69,9 +74,6 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Comfortable motion
 Plug 'yuttie/comfortable-motion.vim'
-
-" Debugger plugin
-Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh \| UpdateRemotePlugins' }
 
 " Color theme
 " Plug 'danilo-augusto/vim-afterglow'

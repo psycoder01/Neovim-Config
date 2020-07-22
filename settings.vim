@@ -1,5 +1,6 @@
 " set-number
-set number
+set number relativenumber
+set nu rnu
 
 " color-theme
 " colorscheme afterglow
