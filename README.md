@@ -1,18 +1,22 @@
 # Psycoder01 || Neovim Setup
 ## NeoVim
 
-Install NeoVim (You can use your linux distro package manager)
-> sudo pacman -S neovim
-
+Install NeoVim (Use package manager of distro)
+```bash
+sudo pacman -S neovim
+```
 Create a directory 
-> ~/.config/nvim
-
-Put the file in the nvim folder
+```bash
+~/.config/nvim
+```
+Put all the files in the nvim folder
 
 Open Neovim and run 
-> :PlugInstall
-
+```vim
+:PlugInstall
+```
 For flutter extension , run
-> :CocInstall coc-flutter
-
+```vim
+:CocInstall coc-flutter
+```
 This setup is mainly for Web Development and Flutter.
