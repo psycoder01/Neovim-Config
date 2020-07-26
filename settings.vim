@@ -14,10 +14,6 @@ set softtabstop=4   " number of spaces in tab when editing
 set shiftwidth=4    " number of spaces to use for autoindent
 set expandtab
 
-" airline-theme
-let g:airline_theme='night_owl'
-
-
 " Disable creating swapfiles, see https://stackoverflow.com/q/821902/6064933
 set noswapfile
 

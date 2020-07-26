@@ -112,5 +112,6 @@ nnoremap <leader>sw <C-W><C-x>
 map <leader>b <Home>
 map <leader>e <End>
 
-" Paste Toogle
-set pastetoggle=<F4>
+" Pasting issue
+set pastetoggle=<F5>
+

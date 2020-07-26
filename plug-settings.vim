@@ -36,3 +36,8 @@ let g:indentLine_char = '|'
 
 " Emmet Default Key Map
 let g:user_emmet_leader_key='<C-E>'
+
+" Vim-airline
+let g:airline#extensions#tabline#enabled=1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='deus'
