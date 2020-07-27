@@ -18,7 +18,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 " React snippets
-Plug 'SirVer/ultisnips'
 Plug 'mlaursen/vim-react-snippets'
 
 " Conquer of completness

@@ -6,7 +6,7 @@ nnoremap <leader><space> :noh<cr>
 :autocmd FileType dart nnoremap <leader>f :FormatCode<CR>
 
 " Auto Indent in HTML Tags
-inoremap <C-c> <CR><tab><CR><C-o>k<tab>
+inoremap <C-c> <CR><BS><Esc><S-o>
 
 " NerdTree
 map <f3> :NERDTreeToggle <CR>
