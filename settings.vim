@@ -3,7 +3,6 @@ set number relativenumber
 set nu rnu
 
 " color-theme
-" colorscheme afterglow
 set background=dark
 colorscheme gruvbox
 

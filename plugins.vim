@@ -76,7 +76,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'yuttie/comfortable-motion.vim'
 
 " Color theme
-" Plug 'danilo-augusto/vim-afterglow'
 Plug 'morhetz/gruvbox'
 
 " Dev-icons
