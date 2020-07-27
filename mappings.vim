@@ -11,13 +11,11 @@ inoremap <C-c> <CR><BS><Esc><S-o>
 " NerdTree
 map <f3> :NERDTreeToggle <CR>
 
-
 " Fuzzy Search Directory
 map ds :FZF<CR>
 "let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
-
-" some file commands
+" Some file commands
 " Selecting all text in a file
 nnoremap <C-A> ggVG
 " Saving a file
@@ -31,20 +29,19 @@ map xx :bd! <CR>
 " Esc shortcut
 imap jk <ESC>
 
-" switching windows
+" Switching windows
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 
-" resizing-splits
+" Resizing-splits
 noremap <silent> <C-S-Up> :resize +10<CR>
 noremap <silent> <C-S-Down> :resize -10<CR>
 noremap <silent> <C-S-Right> :vertical resize +10<CR>
 noremap <silent> <C-S-Left> :vertical resize -10<CR>
 
-
-" switching tabs commands
+" Switching tabs commands
 nnoremap <M-h> :tabprevious<CR>
 nnoremap <M-l> :tabnext<CR>
 
@@ -59,8 +56,7 @@ noremap <M-7> 7gt
 noremap <M-8> 8gt
 noremap <M-9> 9gt
 
-
-" flutter mappings
+" Flutter mappings
 map <leader>fe :CocCommand flutter.emulators<CR>
 map <leader>fr :CocCommand flutter.run<CR>
 map <leader>fq :CocCommand flutter.dev.quit<CR>

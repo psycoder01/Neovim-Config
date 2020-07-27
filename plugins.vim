@@ -36,7 +36,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-
 " Multiple Cursors
 Plug 'terryma/vim-multiple-cursors'
 
@@ -66,8 +65,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Since tmux is only available on Linux and Mac, we only enable these plugins
 " for Linux and Mac
 Plug 'christoomey/vim-tmux-navigator'
-" Plug 'tmux-plugins/vim-tmux-focus-events'
-
+Plug 'edkolev/tmuxline.vim'
 " .tmux.conf syntax highlighting and setting check
 " Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 
@@ -82,5 +80,3 @@ Plug 'ryanoasis/vim-devicons'
 
 " end vim-plug
 call plug#end()
-
-

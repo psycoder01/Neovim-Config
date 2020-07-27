@@ -8,6 +8,7 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeMinimalUI=1
 
+
 " NerdCommenter
 filetype plugin on
 
@@ -22,7 +23,7 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 let g:fzf_preview_window = 'right:60%'
 
 
-" comfortable-motion
+" Comfortable-motion
 let g:comfortable_motion_scroll_down_key = "j"
 let g:comfortable_motion_scroll_up_key = "k"
 
@@ -30,17 +31,26 @@ let g:comfortable_motion_scroll_up_key = "k"
 " Rainbow-brackets
 let g:rainbow_active = 1
 
+
 " Indent GuideLines
 let g:indentLine_color_term = 8
 let g:indentLine_char = '|'
 
+
 " Emmet Default Key Map
 let g:user_emmet_leader_key='<C-E>'
+
+
+" Tmuxline
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'win'  : ['#I', '#W'],
+      \'cwin' : ['#I', '#W', '#F'],
+      \'y'    : ['%R', '%a', '%Y'],
+      \'z'    : '#H'}
+
 
 " Vim-airline
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='deus'
-
-" Vim-Dev-Icons
-
+let g:airline_theme='gruvbox'
