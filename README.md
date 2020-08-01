@@ -15,8 +15,35 @@ Open Neovim and run
 ```vim
 :PlugInstall
 ```
-For flutter extension , run
+<br />
+
+**This setup is mainly for Web Development,Flutter,Python.**
+
+<br />
+
+**Check COC Extensions**
+```vim
+:CocList extensions
+``` 
+
+**If no extensions installed**
+<br/>
+
+For TypeScript/JavaScript LSP
+```vim
+:CocInstall coc-tsserver
+```
+For Python LSP
+```vim
+:CocInstall coc-python
+```
+For flutter extension
 ```vim
 :CocInstall coc-flutter
 ```
-This setup is mainly for Web Development and Flutter.
+
+## NOTE:
+You have to install xclip in your system to copy/paste text from/to system clipboard
+```bash
+sudo pacman -S xclip
+```
