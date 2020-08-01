@@ -3,7 +3,7 @@ nnoremap <leader><space> :noh<cr>
 
 " Format-mappings
 :autocmd FileType javascript,typescirpt,html,css,less,sass,scss,vue,markdown,yaml,json nnoremap <leader>f :Prettier<CR>
-:autocmd FileType dart nnoremap <leader>f :FormatCode<CR>
+:autocmd FileType dart,python nnoremap <leader>f :FormatCode<CR>
 
 " Auto Indent in HTML Tags
 inoremap <C-c> <CR><BS><Esc><S-o>

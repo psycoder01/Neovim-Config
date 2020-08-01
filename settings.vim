@@ -3,6 +3,12 @@ set number relativenumber
 set nu rnu
 
 
+" Copy to clipboard
+vnoremap  <leader>y  "+y
+" Paste from clipboard
+nnoremap <leader>p "+p
+
+
 " color-theme
 set background=dark
 colorscheme gruvbox
