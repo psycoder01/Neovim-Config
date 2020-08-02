@@ -42,15 +42,16 @@ let g:user_emmet_leader_key='<C-E>'
 
 
 " Tmuxline
-let g:tmuxline_preset = {
-      \'a'    : '#S',
-      \'win'  : ['#I', '#W'],
-      \'cwin' : ['#I', '#W', '#F'],
-      \'y'    : ['%R', '%a', '%Y'],
-      \'z'    : '#H'}
+" let g:airline#extensions#tmuxline#enabled = 0
+" let g:tmuxline_preset = {
+"      \'a'    : '#S',
+"      \'win'  : ['#I', '#W'],
+"      \'cwin' : ['#I', '#W', '#F'],
+"      \'y'    : ['%R', '%a', '%Y'],
+"      \'z'    : '#H'}
 
 
 " Vim-airline
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='gruvbox'
+let g:airline_theme='deus'

@@ -65,7 +65,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Since tmux is only available on Linux and Mac, we only enable these plugins
 " for Linux and Mac
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'edkolev/tmuxline.vim'
+" Plug 'edkolev/tmuxline.vim'
 " .tmux.conf syntax highlighting and setting check
 " Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 
