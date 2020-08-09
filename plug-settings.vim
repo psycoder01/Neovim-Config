@@ -42,13 +42,13 @@ let g:user_emmet_leader_key='<C-E>'
 
 
 " Tmuxline
-" let g:airline#extensions#tmuxline#enabled = 0
-" let g:tmuxline_preset = {
-"      \'a'    : '#S',
-"      \'win'  : ['#I', '#W'],
-"      \'cwin' : ['#I', '#W', '#F'],
-"      \'y'    : ['%R', '%a', '%Y'],
-"      \'z'    : '#H'}
+let g:airline#extensions#tmuxline#enabled = 1
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'win'  : ['#I', '#W'],
+      \'cwin' : ['#I', '#W', '#F'],
+      \'y'    : ['%R', '%a', '%Y'],
+      \'z'    : '#H'}
 
 
 " Vim-airline
