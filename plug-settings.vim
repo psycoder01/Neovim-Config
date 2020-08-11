@@ -55,3 +55,12 @@ let g:tmuxline_preset = {
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='gruvbox'
+
+" Snippets
+autocmd BufRead,BufNewFile,BufEnter *.dart UltiSnipsAddFiletypes dart-flutter
+" Trigger configuration
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"

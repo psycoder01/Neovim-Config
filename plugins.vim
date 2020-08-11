@@ -4,7 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'pangloss/vim-javascript'
 
 " Jsx Pretty
-Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'HerringtonDarkholme/yats.vim'
 " or Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
@@ -37,7 +37,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Multiple Cursors
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 " Rainbow Brackets
 Plug 'luochen1990/rainbow'
@@ -71,6 +71,10 @@ Plug 'edkolev/tmuxline.vim'
 
 " Comfortable motion
 Plug 'yuttie/comfortable-motion.vim'
+
+" Vim snippest
+Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
 
 " Color theme
 Plug 'morhetz/gruvbox'

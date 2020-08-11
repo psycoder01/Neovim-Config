@@ -3,6 +3,11 @@ set number relativenumber
 set nu rnu
 
 
+" Cursor Blinking
+set guicursor=n:blinkwait700-blinkon400-blinkoff250
+set guicursor+=i:ver100-iCursor
+
+
 " Copy to clipboard
 vnoremap  <leader>y  "+y
 " Paste from clipboard
@@ -45,7 +50,7 @@ set wildignore+=/node_modules
 
 
 " Completion behaviour
-set completeopt+=noinsert  " Auto select the first completion entry
+" set completeopt+=noinsert  " Auto select the first completion entry
 set completeopt+=menuone  " Show menu even if there is only one item
 "set completeopt-=preview  " Disable the preview window
 
