@@ -1,6 +1,6 @@
 " Format Settings
-"let g:prettier#autoformat = 0
-"let g:prettier#config#tab_width = 2
+autocmd FileType javascript,typescirpt,html,css,less,sass,scss,vue,markdown,yaml,json nnoremap <leader>f :Prettier<CR>
+autocmd FileType dart,python nnoremap <leader>f :Neoformat<CR>
 
 
 " NerdTree

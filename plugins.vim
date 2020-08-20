@@ -1,21 +1,20 @@
 call plug#begin('~/.config/nvim/plugged')
 
-" JavaScript Plugin
-Plug 'pangloss/vim-javascript'
-
 " Jsx Pretty
 " Plug 'HerringtonDarkholme/yats.vim'
 " or Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
+
+" Prettier
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 " Emmet
 Plug 'mattn/emmet-vim'
 
 " Indent GuideLines
 Plug 'Yggdroot/indentLine'
-
-" Prettier PLugin
-Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 " React snippets
 Plug 'mlaursen/vim-react-snippets'
@@ -48,10 +47,8 @@ Plug 'tpope/vim-surround'
 " Dart
 Plug 'dart-lang/dart-vim-plugin'
 
-" Format Code
-Plug 'google/vim-maktaba'
-Plug 'google/vim-codefmt'
-Plug 'google/vim-glaive'
+" Code Foramtter
+Plug 'sbdchd/neoformat'
 
 " Auto-Pairs
 Plug 'jiangmiao/auto-pairs'

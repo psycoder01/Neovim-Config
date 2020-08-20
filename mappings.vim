@@ -2,8 +2,7 @@
 nnoremap <leader><space> :noh<cr>
 
 " Format-mappings
-:autocmd FileType javascript,typescirpt,html,css,less,sass,scss,vue,markdown,yaml,json nnoremap <leader>f :Prettier<CR>
-:autocmd FileType dart,python nnoremap <leader>f :FormatCode<CR>
+nnoremap <leader>f :Neoformat<CR>
 
 " Auto Indent in HTML Tags
 inoremap <C-c> <CR><BS><Esc><S-o>
@@ -69,10 +68,6 @@ map <leader>fdl :call OpenFlutterLog()<CR>
 nnoremap nve :e $MYVIMRC<CR>
 nnoremap nvc :so $MYVIMRC<CR>
 
-" autocomplete settings
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
-
 
 " comfortable-motion-settings
 " scroll based on window height
@@ -83,11 +78,11 @@ nnoremap <silent> <C-b> :call comfortable_motion#flick(winheight(0) * -4)<CR>
 
 
 " coc-commands
-nmap <silent> gd :vsplit<CR><Plug>(coc-definition)
-nmap <silent> gt :vsp<CR><Plug>(coc-definition)<C-W>T
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <leader>gd :vsplit<CR><Plug>(coc-definition)
+nmap <silent> <leader>gt :vsp<CR><Plug>(coc-definition)<C-W>T
+nmap <silent> <leader>gy <Plug>(coc-type-definition)
+nmap <silent> <leader>gi <Plug>(coc-implementation)
+nmap <silent> <leader>gr <Plug>(coc-references)
 
 " Applying codeAction shortcut
 nmap <leader>ca :CocAction<CR>
