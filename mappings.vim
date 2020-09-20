@@ -5,7 +5,7 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <leader>f :Neoformat<CR>
 
 " Auto Indent in HTML Tags
-inoremap <C-c> <CR><BS><Esc><S-o>
+inoremap <C-c> <CR><Esc><S-o>
 
 " NerdTree
 map <f3> :NERDTreeToggle <CR>

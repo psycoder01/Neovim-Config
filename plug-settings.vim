@@ -1,5 +1,10 @@
+" recognize ts,tsx as typescript files
+au BufNewFile,BufRead *.ts setlocal filetype=typescript
+au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
+
+
 " Format Settings
-autocmd FileType javascript,typescirpt,html,css,less,sass,scss,vue,markdown,yaml,json nnoremap <leader>f :Prettier<CR>
+autocmd FileType javascript,typescirpt,typescript.tsx,html,css,less,sass,scss,vue,markdown,yaml,json nnoremap <leader>f :Prettier<CR>
 autocmd FileType dart,python nnoremap <leader>f :Neoformat<CR>
 
 
@@ -16,6 +21,8 @@ filetype plugin on
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+" Indent Line Conceal
+let g:indentLine_setConceal = 0
 
 " FZF
 " Ignore some folders
@@ -53,11 +60,18 @@ let g:tmuxline_preset = {
 
 " Vim-airline
 let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_section_b=''
 let g:airline_powerline_fonts = 1
 let g:airline_theme='gruvbox'
 
 " Snippets
 autocmd BufRead,BufNewFile,BufEnter *.dart UltiSnipsAddFiletypes dart-flutter
+let g:user_emmet_settings = {
+\ 'typescript' : {
+\     'extends' : 'jsx',
+\ },
+\}
 " Trigger configuration
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
