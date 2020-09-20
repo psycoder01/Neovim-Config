@@ -21,9 +21,6 @@ filetype plugin on
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" Indent Line Conceal
-let g:indentLine_setConceal = 0
-
 " FZF
 " Ignore some folders
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
@@ -78,3 +75,6 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" Vim-json character concealing fix
+let g:vim_json_syntax_conceal = 0

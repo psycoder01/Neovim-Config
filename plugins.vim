@@ -15,6 +15,7 @@ Plug 'mattn/emmet-vim'
 
 " Indent GuideLines
 Plug 'Yggdroot/indentLine'
+Plug 'elzr/vim-json'
 
 " React snippets
 Plug 'mlaursen/vim-react-snippets'
