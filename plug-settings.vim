@@ -4,7 +4,7 @@ au BufNewFile,BufRead *.jsx setlocal filetype=javascriptreact
 
 
 " Format Settings
-autocmd FileType javascript,javascript.jsx,typescirpt,typescript.tsx,html,css,less,sass,scss,vue,markdown,yaml,json nnoremap <leader>f :Prettier<CR>
+autocmd FileType javascript,javascriptreact,typescirpt,typescriptreact,html,css,less,sass,scss,vue,markdown,yaml,json nnoremap <leader>f :Prettier<CR>
 autocmd FileType dart,python nnoremap <leader>f :Neoformat<CR>
 
 
