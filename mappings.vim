@@ -85,7 +85,7 @@ nmap <silent> <leader>gi <Plug>(coc-implementation)
 nmap <silent> <leader>gr <Plug>(coc-references)
 
 " Applying codeAction shortcut
-nmap <leader>ca :CocAction<CR>
+nmap <leader>coa :CocAction<CR>
 
 " Applying codeAction to the selected region.
 xmap <leader>a  <Plug>(coc-codeaction-selected)

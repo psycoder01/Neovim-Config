@@ -1,9 +1,13 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " Jsx Pretty
-" Plug 'HerringtonDarkholme/yats.vim'
-" or Plug 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'maxmellon/vim-jsx-pretty'
+
+"Auto close tags
+Plug 'alvan/vim-closetag'
 
 " Prettier
 Plug 'prettier/vim-prettier', {

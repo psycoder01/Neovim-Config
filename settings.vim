@@ -78,6 +78,8 @@ let g:rainbow_conf={
             \}
             \}
 
+" NerdTree mirror
+autocmd BufWinEnter * NERDTreeMirror
 
 " flutter-log-openbottom
 function! OpenFlutterLog()

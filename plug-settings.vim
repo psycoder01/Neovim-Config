@@ -1,10 +1,10 @@
 " recognize ts,tsx as typescript files
-au BufNewFile,BufRead *.ts setlocal filetype=typescript
-au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
+au BufNewFile,BufRead *.tsx setlocal filetype=typescriptreact
+au BufNewFile,BufRead *.jsx setlocal filetype=javascriptreact
 
 
 " Format Settings
-autocmd FileType javascript,typescirpt,typescript.tsx,html,css,less,sass,scss,vue,markdown,yaml,json nnoremap <leader>f :Prettier<CR>
+autocmd FileType javascript,javascript.jsx,typescirpt,typescript.tsx,html,css,less,sass,scss,vue,markdown,yaml,json nnoremap <leader>f :Prettier<CR>
 autocmd FileType dart,python nnoremap <leader>f :Neoformat<CR>
 
 
@@ -78,3 +78,6 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Vim-json character concealing fix
 let g:vim_json_syntax_conceal = 0
+
+" Closing tag
+let g:closetag_filetypes = 'html,xhtml,phtml,javascript,javascriptreact,typescript,typescriptreact'
