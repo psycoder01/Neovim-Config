@@ -28,8 +28,8 @@ let g:fzf_preview_window = 'right:60%'
 
 
 " Comfortable-motion
-let g:comfortable_motion_scroll_down_key = "j"
-let g:comfortable_motion_scroll_up_key = "k"
+" let g:comfortable_motion_scroll_down_key = "j"
+" let g:comfortable_motion_scroll_up_key = "k"
 
 
 " Rainbow-brackets

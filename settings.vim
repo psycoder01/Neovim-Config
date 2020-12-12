@@ -20,6 +20,10 @@ set softtabstop=4   " number of spaces in tab when editing
 set shiftwidth=4    " number of spaces to use for autoindent
 set expandtab
 
+" Prettier Config
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#trailing_comma = 'all'
+
 
 " Disable creating swapfiles, see https://stackoverflow.com/q/821902/6064933
 set noswapfile

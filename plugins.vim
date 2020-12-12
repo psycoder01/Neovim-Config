@@ -72,7 +72,7 @@ Plug 'edkolev/tmuxline.vim'
 " Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 
 " Comfortable motion
-Plug 'yuttie/comfortable-motion.vim'
+" Plug 'yuttie/comfortable-motion.vim'
 
 " Vim snippest
 Plug 'honza/vim-snippets'
