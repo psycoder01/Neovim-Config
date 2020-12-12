@@ -12,9 +12,9 @@ map ds :FZF<CR>
 " Selecting all text in a file
 nnoremap <C-A> ggVG
 " Saving a file
-map s :w <CR>
+map <C-s> :w <CR>
 " redo
-map r :redo <CR>
+map <C-r> :redo <CR>
 " Exiting buffer , error if changes not saved
 map xt :bd <CR>
 " Exiting buffer , no error if changes not saved

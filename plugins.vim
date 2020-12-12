@@ -9,6 +9,9 @@ Plug 'maxmellon/vim-jsx-pretty'
 "Auto close tags
 Plug 'alvan/vim-closetag'
 
+" Sneak to any position
+Plug 'justinmk/vim-sneak'
+
 " Prettier
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
