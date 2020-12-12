@@ -1,12 +1,6 @@
 " Clear Search Mark
 nnoremap <leader><space> :noh<cr>
 
-" Format-mappings
-nnoremap <leader>f :Neoformat<CR>
-
-" Auto Indent in HTML Tags
-inoremap <C-c> <CR><Esc><S-o>
-
 " NerdTree
 map <f3> :NERDTreeToggle <CR>
 
@@ -67,15 +61,6 @@ map <leader>fdl :call OpenFlutterLog()<CR>
 " autoreloading config file
 nnoremap nve :e $MYVIMRC<CR>
 nnoremap nvc :so $MYVIMRC<CR>
-
-
-" comfortable-motion-settings
-" scroll based on window height
-" nnoremap <silent> <C-d> :call comfortable_motion#flick(winheight(0) * 2)<CR>
-" nnoremap <silent> <C-u> :call comfortable_motion#flick(winheight(0) * -2)<CR>
-" nnoremap <silent> <C-f> :call comfortable_motion#flick(winheight(0) * 4)<CR>
-" nnoremap <silent> <C-b> :call comfortable_motion#flick(winheight(0) * -4)<CR>
-
 
 " coc-commands
 nmap <silent> <leader>gd :vsplit<CR><Plug>(coc-definition)

@@ -71,9 +71,6 @@ Plug 'edkolev/tmuxline.vim'
 " .tmux.conf syntax highlighting and setting check
 " Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 
-" Comfortable motion
-" Plug 'yuttie/comfortable-motion.vim'
-
 " Vim snippest
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'

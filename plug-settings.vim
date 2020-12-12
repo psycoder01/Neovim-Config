@@ -7,7 +7,6 @@ au BufNewFile,BufRead *.jsx setlocal filetype=javascriptreact
 autocmd FileType javascript,javascriptreact,typescirpt,typescriptreact,html,css,less,sass,scss,vue,markdown,yaml,json nnoremap <leader>f :Prettier<CR>
 autocmd FileType dart,python nnoremap <leader>f :Neoformat<CR>
 
-
 " NerdTree
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
@@ -25,11 +24,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Ignore some folders
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 let g:fzf_preview_window = 'right:60%'
-
-
-" Comfortable-motion
-" let g:comfortable_motion_scroll_down_key = "j"
-" let g:comfortable_motion_scroll_up_key = "k"
 
 
 " Rainbow-brackets

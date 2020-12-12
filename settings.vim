@@ -4,9 +4,9 @@ set nu rnu
 
 
 " Copy to clipboard
-vnoremap  <leader>y  "+y
+vnoremap  <C-c>  "+y
 " Paste from clipboard
-nnoremap <leader>p "+p
+nnoremap <C-v> "+p
 
 
 " color-theme
@@ -33,11 +33,6 @@ set noswapfile
 set scrolloff=4
 
 
-" Use mouse to select and resize windows, etc.
-" set mouse=nic  " Enable mouse in several mode
-" set mousemodel=popup  " Set the behaviour of mouse
-
-
 " Ignore certain files and folders when globbing
 set wildignore+=*.o,*.obj,*.bin,*.dll,*.exe
 set wildignore+=*/.git/*,*/.svn/*,*/__pycache__/*,*/build/**
@@ -48,9 +43,7 @@ set wildignore+=/node_modules
 
 
 " Completion behaviour
-" set completeopt+=noinsert  " Auto select the first completion entry
 set completeopt+=menuone  " Show menu even if there is only one item
-"set completeopt-=preview  " Disable the preview window
 
 
 " Settings for popup menu
@@ -103,3 +96,29 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" Auto indent when pressed enter between html tags
+function! Expander()
+  let line   = getline(".")
+  let col    = col(".")
+  let first  = line[col-2]
+  let second = line[col-1]
+  let third  = line[col]
+
+  if first ==# ">"
+    if second ==# "<" && third ==# "/"
+      return "\<CR>\<C-o>==\<C-o>O"
+
+    else
+      return "\<CR>"
+
+    endif
+
+  else
+    return "\<CR>"
+
+  endif
+
+endfunction
+
+inoremap <expr> <CR> Expander()
