@@ -37,6 +37,14 @@ For Python LSP
 ```vim
 :CocInstall coc-python
 ```
+Integration with Neovim
+```bash
+python -m pip install --user neovim
+```
+Python Code Formatter
+```bash
+python -m pip install --user autopep8
+```
 For flutter extension
 ```vim
 :CocInstall coc-flutter
@@ -46,4 +54,8 @@ For flutter extension
 You have to install xclip in your system to copy/paste text from/to system clipboard
 ```bash
 sudo pacman -S xclip
+```
+Install for fzf to work properly
+```bash
+sudo pacman -S the_silver_searcher
 ```
