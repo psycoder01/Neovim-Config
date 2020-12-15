@@ -24,6 +24,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Ignore some folders
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 let g:fzf_preview_window = 'right:60%'
+command! -bang Windows call fzf#vim#windows({'options': ['--query', '!NERD ']}, <bang>0)
 
 " Menu Suggestions
 set wildmenu
