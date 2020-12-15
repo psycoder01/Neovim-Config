@@ -5,8 +5,10 @@ nnoremap <leader><space> :noh<cr>
 map <f3> :NERDTreeToggle <CR>
 
 " Fuzzy Search Directory
-map ds :FZF<CR>
-"let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+" Prevents File opening in Nerd Tree Section
+nnoremap <silent> <expr> <leader>ff (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":FZF\<cr>"
+" Fuzzy Windows Switch
+map <leader>fw :Windows<CR>
 
 " Some file commands
 " Selecting all text in a file
@@ -90,4 +92,3 @@ map <leader>e <End>
 
 " Pasting issue
 set pastetoggle=<F5>
-

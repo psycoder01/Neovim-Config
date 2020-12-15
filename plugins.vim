@@ -38,6 +38,7 @@ Plug 'preservim/nerdcommenter'
 
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Airline
 Plug 'vim-airline/vim-airline'

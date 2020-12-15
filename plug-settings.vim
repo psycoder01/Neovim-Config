@@ -25,6 +25,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 let g:fzf_preview_window = 'right:60%'
 
+" Menu Suggestions
+set wildmenu
+
 
 " Rainbow-brackets
 let g:rainbow_active = 1
@@ -75,3 +78,7 @@ let g:vim_json_syntax_conceal = 0
 
 " Closing tag
 let g:closetag_filetypes = 'html,xhtml,phtml,javascript,javascriptreact,typescript,typescriptreact'
+
+" COC
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
