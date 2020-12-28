@@ -6,6 +6,9 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'maxmellon/vim-jsx-pretty'
 
+" Find Functions,Variables,Classes etc
+Plug 'misterbuckley/vim-definitive'
+
 "Auto close tags
 Plug 'alvan/vim-closetag'
 

@@ -11,6 +11,8 @@ autocmd FileType dart,python nnoremap <leader>f :Neoformat<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeMinimalUI=1
+let g:indentLine_fileTypeExclude = ["nerdtree"]
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
 " NerdCommenter

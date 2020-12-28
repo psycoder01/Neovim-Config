@@ -4,6 +4,10 @@ nnoremap <leader><space> :noh<cr>
 " NerdTree
 map <f3> :NERDTreeToggle <CR>
 
+" Vim-definitive Keybinds
+nnoremap <Leader>d :FindDefinition<CR> " Normal mode
+vnoremap <Leader>d "ay:FindDefinition <C-R>a<CR> " Visual mode
+
 " Fuzzy Search Directory
 " Prevents File opening in Nerd Tree Section
 nnoremap <silent> <expr> <leader>ff (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":FZF\<cr>"
