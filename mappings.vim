@@ -5,12 +5,12 @@ nnoremap <leader><space> :noh<cr>
 map <f3> :NERDTreeToggle <CR>
 
 " Vim-definitive Keybinds
-nnoremap <Leader>d :FindDefinition<CR> " Normal mode
-vnoremap <Leader>d "ay:FindDefinition <C-R>a<CR> " Visual mode
+nnoremap <Leader>d :VFindDefinition<CR> " Normal mode
+vnoremap <Leader>d "ay:VFindDefinition <C-R>a<CR> " Visual mode
 
 " Fuzzy Search Directory
 " Prevents File opening in Nerd Tree Section
-nnoremap <silent> <expr> <leader>ff (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":FZF\<cr>"
+nnoremap <silent> <expr> <leader>ff (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
 " Fuzzy Windows Switch
 map <leader>fw :Windows<CR>
 

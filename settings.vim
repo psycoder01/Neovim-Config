@@ -6,7 +6,7 @@ set nu rnu
 " Copy to clipboard
 vnoremap  <C-c>  "+y
 " Paste from clipboard
-nnoremap <C-v> "+p
+nnoremap <C-p> "+p
 
 
 " color-theme

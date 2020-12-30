@@ -13,7 +13,8 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeMinimalUI=1
 let g:indentLine_fileTypeExclude = ["nerdtree"]
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
+" disable mirroring in vim definitive window
+autocmd VimEnter * if &filetype !=# 'qf' | NERDTree | endif
 
 " NerdCommenter
 filetype plugin on
