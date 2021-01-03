@@ -40,6 +40,7 @@ let g:rainbow_active = 1
 " Indent GuideLines
 let g:indentLine_color_term = 8
 let g:indentLine_char = '|'
+au BufRead,BufEnter,BufNewFile * IndentLinesReset
 
 
 " Emmet Default Key Map

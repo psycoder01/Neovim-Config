@@ -23,6 +23,8 @@ set expandtab
 " Prettier Config
 let g:prettier#config#single_quote = 'true'
 let g:prettier#config#trailing_comma = 'all'
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
 
 
 " Disable creating swapfiles, see https://stackoverflow.com/q/821902/6064933
