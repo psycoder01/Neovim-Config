@@ -1,12 +1,13 @@
 " Clear Search Mark
 nnoremap <leader><space> :noh<cr>
 
-" NerdTree
-map <f3> :NERDTreeToggle <CR>
+" Copy to clipboard
+vnoremap  <C-y>  "+y
+" Paste from clipboard
+nnoremap <C-p> "+p
 
-" Vim-definitive Keybinds
-nnoremap <Leader>d :VFindDefinition<CR> " Normal mode
-vnoremap <Leader>d "ay:VFindDefinition <C-R>a<CR> " Visual mode
+" NerdTree
+map <f3> <plug>NERDTreeTabsToggle<CR>
 
 " Fuzzy Search Directory
 " Prevents File opening in Nerd Tree Section

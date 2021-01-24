@@ -35,6 +35,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Nerd Tree
 Plug 'preservim/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 
 " Nerd commenter
 Plug 'preservim/nerdcommenter'

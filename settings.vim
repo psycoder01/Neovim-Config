@@ -2,13 +2,6 @@
 set number relativenumber
 set nu rnu
 
-
-" Copy to clipboard
-vnoremap  <C-c>  "+y
-" Paste from clipboard
-nnoremap <C-p> "+p
-
-
 " color-theme
 let g:gruvbox_contrast_dark = "hard"
 colorscheme gruvbox
@@ -77,8 +70,6 @@ let g:rainbow_conf={
             \}
             \}
 
-" NerdTree mirror
-autocmd BufWinEnter * NERDTreeMirror
 
 " flutter-log-openbottom
 function! OpenFlutterLog()

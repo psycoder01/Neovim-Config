@@ -12,16 +12,10 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeMinimalUI=1
 let g:indentLine_fileTypeExclude = ["nerdtree"]
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" disable mirroring in vim definitive window
-autocmd VimEnter * if &filetype !=# 'qf' | NERDTree | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " NerdCommenter
 filetype plugin on
-
-" NerdTree auto placement
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " FZF
 " Ignore some folders
@@ -38,9 +32,9 @@ let g:rainbow_active = 1
 
 
 " Indent GuideLines
+let g:indentLine_conceallevel = 1
 let g:indentLine_color_term = 8
 let g:indentLine_char = '|'
-au BufRead,BufEnter,BufNewFile * IndentLinesReset
 
 
 " Emmet Default Key Map
@@ -52,9 +46,7 @@ let g:airline#extensions#tmuxline#enabled = 1
 let g:tmuxline_preset = {
       \'a'    : '#S',
       \'win'  : ['#I', '#W'],
-      \'cwin' : ['#I', '#W', '#F'],
-      \'y'    : ['%R', '%a', '%Y'],
-      \'z'    : '#H'}
+      \'cwin' : ['#I', '#W', '#F']}
 
 
 " Vim-airline
