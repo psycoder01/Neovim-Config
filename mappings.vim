@@ -7,7 +7,7 @@ vnoremap  <C-y>  "+y
 nnoremap <C-p> "+p
 
 " NerdTree
-map <f3> <plug>NERDTreeTabsToggle<CR>
+map <C-f> :NERDTreeFind<CR>
 
 " Fuzzy Search Directory
 " Prevents File opening in Nerd Tree Section
@@ -16,20 +16,15 @@ nnoremap <silent> <expr> <leader>ff (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>"
 map <leader>fw :Windows<CR>
 
 " Some file commands
+nnoremap xt :bd<CR>
 " Selecting all text in a file
 nnoremap <C-A> ggVG
-" Saving a file
-map <C-s> :w <CR>
 " redo
 map <C-r> :redo <CR>
-" Exiting buffer , error if changes not saved
-map xt :bd <CR>
-" Exiting buffer , no error if changes not saved
-map xx :bd! <CR>
 " Esc shortcut
 imap jk <ESC>
 
-" Switching windows
+" Switching splits
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
@@ -40,10 +35,6 @@ noremap <silent> <C-S-Up> :resize +10<CR>
 noremap <silent> <C-S-Down> :resize -10<CR>
 noremap <silent> <C-S-Right> :vertical resize +10<CR>
 noremap <silent> <C-S-Left> :vertical resize -10<CR>
-
-" Switching tabs commands
-nnoremap <M-h> :tabprevious<CR>
-nnoremap <M-l> :tabnext<CR>
 
 " Tab switching 
 noremap <M-1> 1gt

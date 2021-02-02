@@ -1,10 +1,7 @@
 " set-number
 set number relativenumber
 set nu rnu
-
-" color-theme
-let g:gruvbox_contrast_dark = "hard"
-colorscheme gruvbox
+set nowrap sidescroll=1 listchars=extends:>,precedes:<
 
 " tab setting
 " General tab settings
@@ -12,13 +9,6 @@ set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
 set shiftwidth=4    " number of spaces to use for autoindent
 set expandtab
-
-" Prettier Config
-let g:prettier#config#single_quote = 'true'
-let g:prettier#config#trailing_comma = 'all'
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
-
 
 " Disable creating swapfiles, see https://stackoverflow.com/q/821902/6064933
 set noswapfile
@@ -61,14 +51,6 @@ function! OpenTerminal()
   resize 10
 endfunction
 nnoremap <M-t> :call OpenTerminal()<CR>
-
-
-" NerdTree-brackets-concealing
-let g:rainbow_conf={
-            \'separately':{
-            \'nerdtree':0,
-            \}
-            \}
 
 
 " flutter-log-openbottom
@@ -115,3 +97,11 @@ function! Expander()
 endfunction
 
 inoremap <expr> <CR> Expander()
+
+function! s:nerdTreeToggle()
+    if (argc() > 0 || exists("s:std_in"))
+        wincmd p
+    else
+        NERDTree
+    endif
+endfunction

@@ -2,17 +2,56 @@
 au BufNewFile,BufRead *.tsx setlocal filetype=typescriptreact
 au BufNewFile,BufRead *.jsx setlocal filetype=javascriptreact
 
+" Gruvbox
+let g:gruvbox_contrast_dark = "hard"
+colorscheme gruvbox
 
-" Format Settings
-autocmd FileType javascript,javascriptreact,typescirpt,typescriptreact,html,css,less,sass,scss,vue,markdown,yaml,json nnoremap <leader>f :Prettier<CR>
-autocmd FileType dart,python nnoremap <leader>f :Neoformat<CR>
+
+" Formatter Settings
+map <leader>f :FormatCode<CR>
+augroup autoformat_settings
+  autocmd FileType c,cpp AutoFormatBuffer clang-format
+  autocmd FileType dart AutoFormatBuffer dartfmt
+  autocmd FileType go AutoFormatBuffer gofmt
+  autocmd FileType html,css,sass,scss,less,json,javascript,javascriptreact,typescript,typescriptreact AutoFormatBuffer prettier
+  autocmd FileType python AutoFormatBuffer autopep8
+  autocmd FileType rust AutoFormatBuffer rustfmt
+augroup END
 
 " NerdTree
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeDirArrows = 1
 let NERDTreeMinimalUI=1
-let g:indentLine_fileTypeExclude = ["nerdtree"]
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" NerdTree-brackets-concealing
+let g:rainbow_conf={
+            \'separately':{
+            \'nerdtree':0,
+            \}
+            \}
+" NerdTree on every tab
+autocmd BufWinEnter * silent NERDTreeMirror
+autocmd StdinReadPre * let s:std_in=1
+" NerdTree on vim enter
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') && v:this_session == '' | NERDTree | endif | wincmd p
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
+" Exit window if NerdTree is last buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Show hidden files by default
+let NERDTreeShowHidden = 1
+" Check if current window is NerdTree
+fun! s:IsCurrentWindowNERDTree()
+  return exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) == winnr()
+endfun
+fun! s:NERDTreeTrick()
+  if s:IsCurrentWindowNERDTree()
+    wincmd p    
+  endif
+endfun
+map <f3> :NERDTreeToggle<CR> :call <SID>NERDTreeTrick()<CR>
+autocmd TabLeave * call s:NERDTreeTrick()
 
 " NerdCommenter
 filetype plugin on
@@ -35,7 +74,7 @@ let g:rainbow_active = 1
 let g:indentLine_conceallevel = 1
 let g:indentLine_color_term = 8
 let g:indentLine_char = '|'
-
+let g:indentLine_fileTypeExclude = ["nerdtree"]
 
 " Emmet Default Key Map
 let g:user_emmet_leader_key='<C-E>'
@@ -75,6 +114,12 @@ let g:vim_json_syntax_conceal = 0
 
 " Closing tag
 let g:closetag_filetypes = 'html,xhtml,phtml,javascript,javascriptreact,typescript,typescriptreact'
+let g:closetag_regions = {
+    \ 'typescriptreact': 'jsxRegion,tsxRegion',
+    \ 'javascriptreact': 'jsxRegion',
+    \ 'typescript': 'jsxRegion,tsxRegion',
+    \ 'javascript': 'jsxRegion',
+    \ }
 
 " COC
 " Highlight the symbol and its references when holding the cursor.
