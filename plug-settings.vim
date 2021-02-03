@@ -71,13 +71,11 @@ let g:rainbow_active = 1
 
 
 " Indent GuideLines
+set conceallevel=1
 let g:indentLine_conceallevel = 1
 let g:indentLine_color_term = 8
 let g:indentLine_char = '|'
 let g:indentLine_fileTypeExclude = ["nerdtree"]
-
-" Emmet Default Key Map
-let g:user_emmet_leader_key='<C-E>'
 
 
 " Tmuxline
@@ -120,6 +118,22 @@ let g:closetag_regions = {
     \ 'typescript': 'jsxRegion,tsxRegion',
     \ 'javascript': 'jsxRegion',
     \ }
+
+" Gitgutter
+set updatetime=100
+
+" Git blamer
+let g:blamer_enabled = 1
+let g:blamer_delay = 500
+let g:blamer_show_in_insert_modes = 0
+let g:blamer_relative_time = 1
+
+" Vim airline
+function! AirlineInit()
+    let g:airline_section_a = airline#section#create(['mode'])
+    let g:airline_section_b = airline#section#create(['branch',' ','hunks'])
+endfunction
+autocmd VimEnter * call AirlineInit()
 
 " COC
 " Highlight the symbol and its references when holding the cursor.

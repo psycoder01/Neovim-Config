@@ -65,7 +65,7 @@ Plug 'tpope/vim-surround'
 Plug 'dart-lang/dart-vim-plugin'
 
 " Show git change (change, delete, add) signs in vim sign column
-Plug 'mhinz/vim-signify'
+Plug 'APZelos/blamer.nvim'
 " Git command inside vim
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'

@@ -2,7 +2,7 @@
 nnoremap <leader><space> :noh<cr>
 
 " Copy to clipboard
-vnoremap  <C-y>  "+y
+vnoremap  <C-c>  "+y
 " Paste from clipboard
 nnoremap <C-p> "+p
 
