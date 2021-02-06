@@ -132,6 +132,7 @@ let g:blamer_relative_time = 1
 function! AirlineInit()
     let g:airline_section_a = airline#section#create(['mode'])
     let g:airline_section_b = airline#section#create(['branch',' ','hunks'])
+    let g:airline_section_z = airline#section#create(['%l',':%c','/%L'])
 endfunction
 autocmd VimEnter * call AirlineInit()
 

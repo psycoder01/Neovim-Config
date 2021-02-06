@@ -1,5 +1,7 @@
 " Clear Search Mark
 nnoremap <leader><space> :noh<cr>
+" Silver Searcher
+nnoremap <leader><S-f> :Ag<cr>
 
 " Copy to clipboard
 vnoremap  <C-c>  "+y
