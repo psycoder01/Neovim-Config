@@ -13,6 +13,9 @@ Plug 'preservim/nerdtree'
 Plug 'Yggdroot/indentLine'
 Plug 'elzr/vim-json'
 
+" Prettier
+Plug 'prettier/vim-prettier', {'do': 'yarn install'}
+
 " Conquer of completness
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
