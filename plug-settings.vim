@@ -17,7 +17,7 @@ colorscheme gruvbox
 
 
 " Formatter Settings
-map <leader>f :FormatCode<CR>
+map <silent><leader>f :FormatCode<CR>
 augroup autoformat_settings
   autocmd FileType c,cpp AutoFormatBuffer clang-format
   autocmd FileType dart AutoFormatBuffer dartfmt
@@ -148,3 +148,19 @@ autocmd VimEnter * call AirlineInit()
 " COC
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Vista Window
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista_default_executive = 'ctags'
+let g:vista_executive_for = {
+  \ 'javascriptreact': 'coc',
+  \ 'typescriptreact': 'coc',
+  \ }
+let g:vista_fzf_preview = 1
+"let g:vista_fzf_preview = ['right:80%']
+let g:vista#renderer#enable_icon = 1
+" The default icons can't be suitable for all the filetypes, you can extend it as you wish.
+let g:vista#renderer#icons = {
+\   "function": "\uf794",
+\   "variable": "\uf71b",
+\  }

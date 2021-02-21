@@ -90,3 +90,6 @@ map <leader>e <End>
 
 " Pasting issue
 set pastetoggle=<F5>
+
+" Vista window
+nnoremap <leader>v :Vista!!<CR> 

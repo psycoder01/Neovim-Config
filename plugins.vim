@@ -1,5 +1,8 @@
 call plug#begin('~/.config/nvim/plugged')
 
+" Custom plugin
+Plug '~/Dev/vimimsort'
+Plug 'liuchengxu/vista.vim'
 " Color theme
 Plug 'morhetz/gruvbox'
 
