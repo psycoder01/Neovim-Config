@@ -1,7 +1,8 @@
 call plug#begin('~/.config/nvim/plugged')
 
-" Custom plugin
-Plug '~/Dev/vimimsort'
+" Sort
+Plug 'squgeim/bharyang-vim', { 'do': 'npm install -g bharyang-cli', 'for': ['javascript','typescript','javascriptreact','typescriptreact'] } 
+
 Plug 'liuchengxu/vista.vim'
 " Color theme
 Plug 'morhetz/gruvbox'

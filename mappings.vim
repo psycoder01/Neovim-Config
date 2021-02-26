@@ -93,3 +93,6 @@ set pastetoggle=<F5>
 
 " Vista window
 nnoremap <leader>v :Vista!!<CR> 
+
+" Bharyang
+vnoremap <leader>bh :Bharyang<CR> 

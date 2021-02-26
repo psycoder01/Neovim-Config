@@ -2,10 +2,10 @@
 au BufNewFile,BufRead *.tsx setlocal filetype=typescriptreact
 au BufNewFile,BufRead *.jsx setlocal filetype=javascriptreact
 
-let g:prettier#config#single_quote = 'true'
-let g:prettier#config#trailing_comma = 'all'
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
+"let g:prettier#config#single_quote = 'true'
+"let g:prettier#config#trailing_comma = 'all'
+"let g:prettier#autoformat = 1
+"let g:prettier#autoformat_require_pragma = 0
 "autocmd BufWritePre *.php Prettier
 "let b:prettier_ft_default_args = {
   "\ 'parser': 'php',
@@ -22,7 +22,7 @@ augroup autoformat_settings
   autocmd FileType c,cpp AutoFormatBuffer clang-format
   autocmd FileType dart AutoFormatBuffer dartfmt
   autocmd FileType go AutoFormatBuffer gofmt
-  autocmd FileType html,css,sass,scss,less,json,javascript,javascriptreact,typescript,typescriptreact AutoFormatBuffer <Plug>(Prettier)
+  autocmd FileType html,css,sass,scss,less,json,javascript,javascriptreact,typescript,typescriptreact AutoFormatBuffer prettier
   autocmd FileType python AutoFormatBuffer autopep8
   autocmd FileType rust AutoFormatBuffer rustfmt
 augroup END
