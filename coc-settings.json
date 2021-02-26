@@ -1,4 +1,5 @@
 {
     "diagnostic.virtualText": true,
-    "diagnostic.virtualTextCurrentLineOnly": true
+    "diagnostic.virtualTextCurrentLineOnly": true,
+    "rpc.enabled": false
 }
