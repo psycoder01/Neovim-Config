@@ -1,5 +1,7 @@
 {
     "diagnostic.virtualText": true,
     "diagnostic.virtualTextCurrentLineOnly": true,
-    "rpc.enabled": false
+    "rpc.enabled": false,
+    "rpc.detailsViewing": "{workspace}",
+    "rpc.lowerDetailsEditing" : "{filename}"
 }

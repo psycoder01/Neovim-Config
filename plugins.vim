@@ -39,7 +39,8 @@ Plug 'maxmellon/vim-jsx-pretty'
 " Rainbow Brackets
 Plug 'luochen1990/rainbow'
 
-" React snippets
+" Snippets
+Plug 'vim-scripts/UltiSnips' 
 Plug 'mlaursen/vim-react-snippets'
 
 " Emmet
