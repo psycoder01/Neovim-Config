@@ -1,5 +1,8 @@
 call plug#begin('~/.config/nvim/plugged')
 
+" Tabline
+Plug 'mg979/vim-xtabline'
+
 " Sort
 Plug 'squgeim/bharyang-vim', { 'do': 'npm install -g bharyang-cli', 'for': ['javascript','typescript','javascriptreact','typescriptreact'] } 
 
