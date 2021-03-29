@@ -1,6 +1,6 @@
 " File:      init.vim (for nvim)                                                          
 " Author:    Psycoder01
-                                     
+
 let g:mapleader =','
 set encoding=UTF-8
 

@@ -2,30 +2,26 @@
 au BufNewFile,BufRead *.tsx setlocal filetype=typescriptreact
 au BufNewFile,BufRead *.jsx setlocal filetype=javascriptreact
 
-"let g:prettier#config#single_quote = 'true'
-"let g:prettier#config#trailing_comma = 'all'
-"let g:prettier#autoformat = 1
-"let g:prettier#autoformat_require_pragma = 0
-"autocmd BufWritePre *.php Prettier
-"let b:prettier_ft_default_args = {
-  "\ 'parser': 'php',
-  "\ }
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#trailing_comma = 'all'
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+autocmd BufWritePre *.php Prettier
+let b:prettier_ft_default_args = {
+  \ 'parser': 'php',
+  \ }
 
 " Gruvbox
-let g:gruvbox_contrast_dark = "hard"
-colorscheme gruvbox
-
+"let g:gruvbox_contrast_dark = "hard"
+"colorscheme gruvbox
+let g:serenade_enable_italic = 1
+let g:serenade_transparent_background = 1
+let g:serenade_diagnostic_text_highlight = 1
+let g:serenade_diagnostic_line_highlight = 0
+colorscheme serenade
 
 " Formatter Settings
 map <silent><leader>f :FormatCode<CR>
-augroup autoformat_settings
-  autocmd FileType c,cpp AutoFormatBuffer clang-format
-  autocmd FileType dart AutoFormatBuffer dartfmt
-  autocmd FileType go AutoFormatBuffer gofmt
-  autocmd FileType html,css,sass,scss,less,json,javascript,javascriptreact,typescript,typescriptreact AutoFormatBuffer prettier
-  autocmd FileType python AutoFormatBuffer autopep8
-  autocmd FileType rust AutoFormatBuffer rustfmt
-augroup END
 
 " NerdTree
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -99,8 +95,7 @@ let g:tmuxline_preset = {
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_section_b=''
-let g:airline_powerline_fonts = 1
-let g:airline_theme='gruvbox'
+let g:airline_theme='wombat'
 
 " Snippets
 autocmd BufRead,BufNewFile,BufEnter *.dart UltiSnipsAddFiletypes dart-flutter

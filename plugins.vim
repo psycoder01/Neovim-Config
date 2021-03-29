@@ -7,8 +7,10 @@ Plug 'mg979/vim-xtabline'
 Plug 'squgeim/bharyang-vim', { 'do': 'npm install -g bharyang-cli', 'for': ['javascript','typescript','javascriptreact','typescriptreact'] } 
 
 Plug 'liuchengxu/vista.vim'
+
 " Color theme
-Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
+Plug 'b4skyx/serenade'
 
 " Dev-icons
 Plug 'ryanoasis/vim-devicons'
