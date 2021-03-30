@@ -1,19 +1,19 @@
 " Clear Search Mark
 nnoremap <leader><space> :noh<cr>
+
 " Silver Searcher
 nnoremap <leader><S-f> :Ag<cr>
 
 " Copy to clipboard
 vnoremap  <C-c>  "+y
+
 " Paste from clipboard
 nnoremap <C-p> "+p
 
-" NerdTree
-map <C-f> :NERDTreeFind<CR>
+" Coc-Explorer
+map <f3> :CocCommand explorer<CR>
 
-" Fuzzy Search Directory
-" Prevents File opening in Nerd Tree Section
-nnoremap <silent> <expr> <leader>ff (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
+
 " Fuzzy Windows Switch
 map <leader>fw :Windows<CR>
 

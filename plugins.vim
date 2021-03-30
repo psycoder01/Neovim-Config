@@ -1,8 +1,5 @@
 call plug#begin('~/.config/nvim/plugged')
 
-" Tabline
-Plug 'mg979/vim-xtabline'
-
 " Sort
 Plug 'squgeim/bharyang-vim', { 'do': 'npm install -g bharyang-cli', 'for': ['javascript','typescript','javascriptreact','typescriptreact'] } 
 
@@ -15,15 +12,14 @@ Plug 'b4skyx/serenade'
 " Dev-icons
 Plug 'ryanoasis/vim-devicons'
 
-" Nerd Tree
-Plug 'preservim/nerdtree'
-
 " Indent GuideLines
 Plug 'Yggdroot/indentLine'
 Plug 'elzr/vim-json'
 
 " Prettier
-Plug 'prettier/vim-prettier', {'do': 'yarn install'}
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 " Conquer of completness
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
