@@ -22,7 +22,7 @@ colorscheme serenade
 
 
 " Formatter Settings
-map <silent><leader>f :FormatCode<CR>
+map <silent><leader>fc :FormatCode<CR>
 
 
 " NerdCommenter
@@ -33,7 +33,7 @@ filetype plugin on
 " Ignore some folders
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 let g:fzf_preview_window = 'right:60%'
-command! -bang Windows call fzf#vim#windows({'options': ['--query', '!NERD ']}, <bang>0)
+let $BAT_THEME = 'gruvbox-dark'
 
 
 " Menu Suggestions

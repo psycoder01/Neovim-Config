@@ -6,6 +6,7 @@ Plug 'squgeim/bharyang-vim', { 'do': 'npm install -g bharyang-cli', 'for': ['jav
 Plug 'liuchengxu/vista.vim'
 
 " Color theme
+Plug 'morhetz/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug 'b4skyx/serenade'
 
