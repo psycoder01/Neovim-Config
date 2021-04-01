@@ -2,13 +2,13 @@
 set number relativenumber
 set nu rnu
 set nowrap sidescroll=1 listchars=extends:>,precedes:<
+set termguicolors
 
 " tab setting
 " General tab settings
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
 set shiftwidth=4    " number of spaces to use for autoindent
-set expandtab
 
 " Disable creating swapfiles, see https://stackoverflow.com/q/821902/6064933
 set noswapfile
