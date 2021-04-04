@@ -18,6 +18,4 @@ runtime plug-settings.vim
 runtime settings.vim
 
 " ======Maps======                              
-runtime! mappings.vim                                                                      
-
-
+runtime! mappings.vim

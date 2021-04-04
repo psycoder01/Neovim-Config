@@ -33,8 +33,9 @@ Plug 'google/vim-codefmt'
 Plug 'preservim/nerdcommenter'
 
 " Jsx Pretty
-Plug 'pangloss/vim-javascript'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
 "Plug 'peitalin/vim-jsx-typescript'
 Plug 'maxmellon/vim-jsx-pretty'
 
