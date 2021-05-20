@@ -14,11 +14,8 @@ let b:prettier_ft_default_args = {
 
 
 " ColorScheme
-let g:serenade_enable_italic = 1
-let g:serenade_transparent_background = 1
-let g:serenade_diagnostic_text_highlight = 1
-let g:serenade_diagnostic_line_highlight = 0
-colorscheme serenade
+let g:gruvbox_italic=1
+colorscheme gruvbox
 
 
 " Formatter Settings
@@ -62,7 +59,7 @@ let g:tmuxline_preset = {
 " Vim-airline
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_section_b=''
-let g:airline_theme='wombat'
+let g:airline_theme='gruvbox'
 
 
 " Snippets

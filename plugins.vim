@@ -5,10 +5,10 @@ Plug 'squgeim/bharyang-vim', { 'do': 'npm install -g bharyang-cli', 'for': ['jav
 
 Plug 'liuchengxu/vista.vim'
 
+Plug 'joshdick/onedark.vim'
+
 " Color theme
 Plug 'morhetz/gruvbox'
-Plug 'sainnhe/gruvbox-material'
-Plug 'b4skyx/serenade'
 
 " Dev-icons
 Plug 'ryanoasis/vim-devicons'
