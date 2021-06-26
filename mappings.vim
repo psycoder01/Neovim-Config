@@ -34,10 +34,10 @@ nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 
 " Resizing-splits
-noremap <silent> <C-S-Up> :resize +10<CR>
-noremap <silent> <C-S-Down> :resize -10<CR>
-noremap <silent> <C-S-Right> :vertical resize +10<CR>
-noremap <silent> <C-S-Left> :vertical resize -10<CR>
+noremap <silent> <C-Up> :resize +10<CR>
+noremap <silent> <C-Down> :resize -10<CR>
+noremap <silent> <C-Right> :vertical resize +10<CR>
+noremap <silent> <C-Left> :vertical resize -10<CR>
 
 " Tab switching 
 noremap <M-1> 1gt
@@ -98,6 +98,9 @@ nnoremap <leader>v :Vista!!<CR>
 " Bharyang
 vnoremap <leader>bh :Bharyang<CR>
 
+" Accept changes in diff tree git
+nnoremap <leader>gh :diffget //2<CR> 
+nnoremap <leader>gl :diffget //3<CR> 
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
