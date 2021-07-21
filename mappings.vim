@@ -69,6 +69,7 @@ nmap <silent> <leader>gt :vsp<CR><Plug>(coc-definition)<C-W>T
 nmap <silent> <leader>gy <Plug>(coc-type-definition)
 nmap <silent> <leader>gi <Plug>(coc-implementation)
 nmap <silent> <leader>gr <Plug>(coc-references)
+nmap <silent> <leader>rn <Plug>(coc-rename)
 
 " Applying codeAction shortcut
 nmap <leader>coa :CocAction<CR>

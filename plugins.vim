@@ -5,7 +5,8 @@ Plug 'squgeim/bharyang-vim', { 'do': 'npm install -g bharyang-cli', 'for': ['jav
 
 Plug 'liuchengxu/vista.vim'
 
-Plug 'joshdick/onedark.vim'
+" Vim colors css
+Plug 'ap/vim-css-color'
 
 " Color theme
 Plug 'morhetz/gruvbox'
@@ -43,6 +44,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'luochen1990/rainbow'
 
 " Snippets
+Plug 'honza/vim-snippets'
 Plug 'vim-scripts/UltiSnips' 
 Plug 'mlaursen/vim-react-snippets'
 
@@ -80,7 +82,6 @@ Plug 'APZelos/blamer.nvim'
 " Git command inside vim
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Since tmux is only available on Linux and Mac, we only enable these plugins
 " for Linux and Mac
