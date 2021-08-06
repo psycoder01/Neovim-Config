@@ -1,0 +1,5 @@
+require('settings.plugin.compe')
+require('settings.plugin.lsp-install')
+require('settings.plugin.nvim-lsp')
+require('settings.plugin.zephyr')
+require('settings.plugin.galaxyline')
