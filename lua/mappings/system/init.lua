@@ -29,17 +29,6 @@ map('n','<silent> <C-Down>',':resize -10<CR>',noremap)
 map('n','<silent> <C-Right>',':vertical resize +10<CR>',noremap)
 map('n','<silent> <C-Left>',':vertical resize -10<CR>',noremap)
 
---Tab switching 
-map('n','<M-1>','1gt',noremap)
-map('n','<M-2>','2gt',noremap)
-map('n','<M-3>','3gt',noremap)
-map('n','<M-4>','4gt',noremap)
-map('n','<M-5>','5gt',noremap)
-map('n','<M-6>','6gt',noremap)
-map('n','<M-7>','7gt',noremap)
-map('n','<M-8>','8gt',noremap)
-map('n','<M-9>','9gt',noremap)
-
 --autoreloading config file
 map('n','nve',':e $MYVIMRC',noremap)
 map('n','nvc',':so $MYVIMRC',noremap)

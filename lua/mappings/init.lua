@@ -1,5 +1,5 @@
 --Leader Key
-vim.g.mapLeader=','
+vim.g.mapleader=","
 
 require('mappings.plugin')
 require('mappings.system')

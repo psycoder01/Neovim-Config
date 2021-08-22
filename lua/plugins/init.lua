@@ -41,10 +41,44 @@ return require('packer').startup(function()
   use {
     'glepnir/galaxyline.nvim',
     branch = 'main',
-    -- your statusline
-    config = function() require'my_statusline' end,
     -- some optional icons
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
+
+  --Barbar buffer line
+  use {
+    'romgrk/barbar.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'}
+  }
+
+  --Smooth Scroll
+  use 'karb94/neoscroll.nvim'
+
+  --Autopais 
+  use 'windwp/nvim-autopairs'
+  --Rainbow Brackets
+  use 'p00f/nvim-ts-rainbow'
+  --Commenter
+  use 'b3nj5m1n/kommentary'
+
+  --Git signs
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
+  
+  --Tmux navigator
+  use 'numToStr/Navigator.nvim'
+
+  --Dynamic size splits
+  use 'beauwilliams/focus.nvim'
+
+  --Starting Dashboard
+  use 'glepnir/dashboard-nvim'
+
+  --Formatter
+  use 'mhartington/formatter.nvim'
 
 end)
