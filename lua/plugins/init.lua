@@ -1,5 +1,5 @@
-local execute = vim.api.nvim_command
 local fn = vim.fn
+local execute = vim.api.nvim_command
 
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
@@ -12,7 +12,7 @@ end
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  
+
   -- Nvim Tree for file exploring
   use 'kyazdani42/nvim-web-devicons'
   use'kyazdani42/nvim-tree.lua'
@@ -26,7 +26,7 @@ return require('packer').startup(function()
   use "lukas-reineke/indent-blankline.nvim"
 
   --Colorscheme
-  use 'glepnir/zephyr-nvim'
+  use 'eddyekofo94/gruvbox-flat.nvim'
 
   --Tresitter
   use 'nvim-treesitter/nvim-treesitter'
@@ -54,7 +54,7 @@ return require('packer').startup(function()
   --Smooth Scroll
   use 'karb94/neoscroll.nvim'
 
-  --Autopais 
+  --Autopais
   use 'windwp/nvim-autopairs'
   --Rainbow Brackets
   use 'p00f/nvim-ts-rainbow'
@@ -68,7 +68,7 @@ return require('packer').startup(function()
       'nvim-lua/plenary.nvim'
     }
   }
-  
+
   --Tmux navigator
   use 'numToStr/Navigator.nvim'
 
