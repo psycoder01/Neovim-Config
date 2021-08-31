@@ -79,6 +79,7 @@ return require('packer').startup(function()
   use 'glepnir/dashboard-nvim'
 
   --Formatter
+  use {'prettier/vim-prettier', run = 'yarn install'}
   use 'mhartington/formatter.nvim'
 
 end)
