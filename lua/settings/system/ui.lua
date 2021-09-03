@@ -9,6 +9,7 @@ vim.o.smartcase=true
 
 --Colors
 vim.o.termguicolors=true
+vim.o.cursorline=true
 
 --Indentation
 vim.o.tabstop=4
