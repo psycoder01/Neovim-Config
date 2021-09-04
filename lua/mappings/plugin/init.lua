@@ -8,6 +8,7 @@ local opts = { noremap = true, silent = true }
 map('n','<F3>',':NvimTreeToggle<CR>',noremap)
 
 --Compe
+-- map("i", "<CR>", "compe#confirm('<CR>')", { expr = true })
 map('i','<silent><expr><C-f>','compoe#scroll({ delta : +4 })',noremap)
 map('i','<silent><expr><C-b>','compoe#scroll({ delta : +4 })',noremap)
 
@@ -69,5 +70,3 @@ map('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
 map('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
 map('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 map("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-
-map("i", "<CR>", "compe#confirm({ 'keys': '<CR>', 'select': v:true })", { expr = true })

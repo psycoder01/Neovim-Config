@@ -17,7 +17,12 @@ return require('packer').startup(function()
   use'kyazdani42/nvim-tree.lua'
   -- Native LSP for neovim
   use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/nvim-compe'
+  use {
+    "hrsh7th/nvim-cmp",
+    requires = {
+      'hrsh7th/cmp-nvim-lsp', --Source nvim lsp
+    }
+  }
   use 'kabouzeid/nvim-lspinstall'
   --Indent Line
   use "lukas-reineke/indent-blankline.nvim"
@@ -61,7 +66,6 @@ return require('packer').startup(function()
   use 'glepnir/dashboard-nvim'
   --Formatter
   use {'prettier/vim-prettier', run = 'yarn install'}
-  use 'mhartington/formatter.nvim'
   --Snippets
   use 'honza/vim-snippets'
   use 'vim-scripts/UltiSnips' 
@@ -69,6 +73,6 @@ return require('packer').startup(function()
   --Vim sneak
   use 'justinmk/vim-sneak'
   --Autoclose tags
-  use 'alvan/vim-closetag'
+  use 'windwp/nvim-ts-autotag'
 
 end)
