@@ -70,3 +70,7 @@ map('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
 map('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
 map('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 map("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+
+--Diffview mappings
+map("n", "<leader>dv", ":DiffviewOpen<CR>", opts)
+map("n", "<leader>dc", ":DiffviewClose<CR>", opts)

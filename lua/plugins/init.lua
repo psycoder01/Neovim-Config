@@ -21,6 +21,8 @@ return require('packer').startup(function()
     "hrsh7th/nvim-cmp",
     requires = {
       'hrsh7th/cmp-nvim-lsp', --Source nvim lsp
+      'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
+      'L3MON4D3/LuaSnip' -- Snippets plugin
     }
   }
   use 'kabouzeid/nvim-lspinstall'
@@ -74,5 +76,7 @@ return require('packer').startup(function()
   use 'justinmk/vim-sneak'
   --Autoclose tags
   use 'windwp/nvim-ts-autotag'
+  -- Packer
+  use 'sindrets/diffview.nvim'
 
 end)
