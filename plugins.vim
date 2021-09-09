@@ -77,6 +77,10 @@ Plug 'tpope/vim-surround'
 " Dart
 Plug 'dart-lang/dart-vim-plugin'
 
+" For S expressions
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+
 " Show git change (change, delete, add) signs in vim sign column
 Plug 'APZelos/blamer.nvim'
 " Git command inside vim
@@ -86,8 +90,5 @@ Plug 'airblade/vim-gitgutter'
 " Since tmux is only available on Linux and Mac, we only enable these plugins
 " for Linux and Mac
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'edkolev/tmuxline.vim'
-" .tmux.conf syntax highlighting and setting check
-" Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 
 call plug#end()

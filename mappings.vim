@@ -17,6 +17,7 @@ map <f3> :CocCommand explorer<CR>
 " Fuzzy Windows Switch
 map <leader>fw :Windows<CR>
 map <leader>ff :Files<CR>
+nnoremap <silent> <leader>fg :Ag <C-R><C-W><CR>
 
 " Some file commands
 nnoremap xt :bd<CR>
