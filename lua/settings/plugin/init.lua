@@ -10,5 +10,10 @@ require('settings.plugin.gitsigns')
 require('settings.plugin.dashboard')
 require('settings.plugin.indent')
 require('settings.plugin.autopairs')
-require('settings.plugin.closetag')
 require('settings.plugin.snippets')
+require('settings.plugin.formatter')
+require('settings.plugin.barbar')
+require('settings.plugin.rainbow')
+
+-- Initialize Plugins
+require('nvim-ts-autotag').setup()

@@ -1,10 +1,8 @@
-vim.opt.listchars = {
-    space = "⋅",
-    eol = "↴",
-}
+vim.opt.listchars = {space = "⋅", eol = "↴"}
+
 require("indent_blankline").setup {
-    --space_char_blankline = " ",
+    -- space_char_blankline = " ",
     show_current_context = true,
-    buftype_exclude = { "terminal", "help" },
-    filetype_exclude = { "nvimtree" }
+    buftype_exclude = {"terminal", "help"},
+    filetype_exclude = {"nvimtree"}
 }
