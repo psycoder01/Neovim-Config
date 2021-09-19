@@ -29,6 +29,9 @@ return require('packer').startup(function()
         }
     }
     use 'kabouzeid/nvim-lspinstall'
+    -- Lsp Utils
+    use 'RishabhRD/popfix'
+    use 'RishabhRD/nvim-lsputils'
     -- Indent Line
     use "lukas-reineke/indent-blankline.nvim"
     -- Colorscheme
@@ -52,7 +55,8 @@ return require('packer').startup(function()
     use 'windwp/nvim-autopairs'
     -- Commenter
     use 'b3nj5m1n/kommentary'
-    -- Git signs
+    -- Git
+    use 'tpope/vim-fugitive'
     use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
     -- Starting Dashboard
     use 'glepnir/dashboard-nvim'
@@ -67,8 +71,6 @@ return require('packer').startup(function()
     use 'justinmk/vim-sneak'
     -- Autoclose tags
     use 'windwp/nvim-ts-autotag'
-    -- Packer
-    use 'sindrets/diffview.nvim'
     -- Colorizer
     use 'norcalli/nvim-colorizer.lua'
 

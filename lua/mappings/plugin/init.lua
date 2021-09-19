@@ -1,23 +1,23 @@
 local map = vim.api.nvim_set_keymap
 
---Options
+-- Options
 noremap = {noremap = true}
-local opts = { noremap = true, silent = true }
+local opts = {noremap = true, silent = true}
 
---Nvim Tree
-map('n','<F3>',':NvimTreeToggle<CR>',noremap)
+-- Nvim Tree
+map('n', '<F3>', ':NvimTreeToggle<CR>', noremap)
 
---Compe
+-- Compe
 -- map("i", "<CR>", "compe#confirm('<CR>')", { expr = true })
-map('i','<silent><expr><C-f>','compoe#scroll({ delta : +4 })',noremap)
-map('i','<silent><expr><C-b>','compoe#scroll({ delta : +4 })',noremap)
+map('i', '<silent><expr><C-f>', 'compoe#scroll({ delta : +4 })', noremap)
+map('i', '<silent><expr><C-b>', 'compoe#scroll({ delta : +4 })', noremap)
 
---Telescope
-map('n','<leader>ff',":Telescope find_files<cr>",noremap)
-map('n','<leader>fw',":Telescope buffers<cr>",noremap)
-map('n','<leader>ft',":Telescope<cr>",noremap)
+-- Telescope
+map('n', '<leader>ff', ":Telescope find_files<cr>", noremap)
+map('n', '<leader>fw', ":Telescope buffers<cr>", noremap)
+map('n', '<leader>ft', ":Telescope live_grep<cr>", noremap)
 
---Barbar
+-- Barbar
 -- Move to previous/next
 map('n', '<A-,>', ':BufferPrevious<CR>', opts)
 map('n', '<A-.>', ':BufferNext<CR>', opts)
@@ -44,7 +44,7 @@ map('n', '<Space>bb', ':BufferOrderByBufferNumber<CR>', opts)
 map('n', '<Space>bd', ':BufferOrderByDirectory<CR>', opts)
 map('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
 
---Kommentry
+-- Kommentry
 map("n", "<leader>cic", "<Plug>kommentary_line_increase", {})
 map("n", "<leader>ci", "<Plug>kommentary_motion_increase", {})
 map("x", "<leader>ci", "<Plug>kommentary_visual_increase", {})
@@ -52,7 +52,7 @@ map("n", "<leader>cdc", "<Plug>kommentary_line_decrease", {})
 map("n", "<leader>cd", "<Plug>kommentary_motion_decrease", {})
 map("x", "<leader>cd", "<Plug>kommentary_visual_decrease", {})
 
---LSP commands
+-- LSP commands
 map('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
 map('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
 map('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
@@ -60,17 +60,21 @@ map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
 map('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
 map('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
 map('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-map('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+map('n', '<space>wl',
+    '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>',
+    opts)
 map('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
 map('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 map('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-map('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
+map('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>',
+    opts)
 map('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
 map('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
 map('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 map("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 
---Diffview mappings
-map("n", "<leader>dv", ":DiffviewOpen<CR>", opts)
-map("n", "<leader>dc", ":DiffviewClose<CR>", opts)
+-- Vim Fugitive
+map("n", "<leader>gs", ":G<CR>", opts)
+map("n", "<leader>gh", ":diffget //2<CR>", opts)
+map("n", "<leader>gl", ":diffget //3<CR>", opts)

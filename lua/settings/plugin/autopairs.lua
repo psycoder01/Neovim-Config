@@ -1,7 +1,9 @@
 require("nvim-autopairs.completion.cmp").setup({
-    auto_select = true, -- automatically select the first item
-    map_complete = true, -- it will auto insert `(` after select function or method item
-    map_cr = true --  map <CR> on insert mode
+    map_cr = true,
+    map_complete = true,
+    auto_select = true,
+    insert = false,
+    map_char = {all = '(', tex = '{'}
 })
 
 require('nvim-autopairs').setup({
