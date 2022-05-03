@@ -28,7 +28,8 @@ return require('packer').startup(function()
             'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
         }
     }
-    use 'kabouzeid/nvim-lspinstall'
+    -- LSP Installer
+    use 'williamboman/nvim-lsp-installer'
     -- Lsp Utils
     use 'RishabhRD/popfix'
     use 'RishabhRD/nvim-lsputils'
@@ -43,8 +44,8 @@ return require('packer').startup(function()
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
     }
-    -- Galaxyline
-    use {'glepnir/galaxyline.nvim', branch = 'main'}
+    -- Lualine
+    use 'nvim-lualine/lualine.nvim'
     -- Barbar buffer line
     use {'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'}}
     -- Smooth Scroll
@@ -73,5 +74,9 @@ return require('packer').startup(function()
     use 'windwp/nvim-ts-autotag'
     -- Colorizer
     use 'norcalli/nvim-colorizer.lua'
+    -- Scala Compiler
+    use 'scalameta/nvim-metals'
+    -- Git Gutter
+    use 'airblade/vim-gitgutter'
 
 end)
