@@ -47,7 +47,7 @@ return require('packer').startup(function()
     -- Lualine
     use 'nvim-lualine/lualine.nvim'
     -- Barbar buffer line
-    use {'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'}}
+    -- use {'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'}}
     -- Smooth Scroll
     use 'karb94/neoscroll.nvim'
     -- Rainbow Brackets
@@ -65,9 +65,7 @@ return require('packer').startup(function()
     use 'mhartington/formatter.nvim'
     use {'prettier/vim-prettier', run = 'yarn install'}
     -- Snippets
-    use 'honza/vim-snippets'
-    use 'vim-scripts/UltiSnips'
-    use 'mlaursen/vim-react-snippets'
+    use 'rafamadriz/friendly-snippets'
     -- Vim sneak
     use 'justinmk/vim-sneak'
     -- Autoclose tags
@@ -75,8 +73,10 @@ return require('packer').startup(function()
     -- Colorizer
     use 'norcalli/nvim-colorizer.lua'
     -- Scala Compiler
-    use 'scalameta/nvim-metals'
+    use({'scalameta/nvim-metals', requires = { "nvim-lua/plenary.nvim" }})
     -- Git Gutter
     use 'airblade/vim-gitgutter'
+    -- Discord Rich Presence
+    use 'andweeb/presence.nvim'
 
 end)

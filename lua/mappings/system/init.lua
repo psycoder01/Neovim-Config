@@ -1,9 +1,13 @@
 local map = vim.api.nvim_set_keymap
 
+-- Options
+noremap = {noremap = true}
+
 -- Buffer Commands
 map('n', 'xt', ':bd<CR>', noremap)
 map('n', 'xx', ':bd!<CR>', noremap)
 map('i', 'jk', '<ESC>', noremap)
+
 -- Selecting all text
 map('n', '<C-A>', 'ggVG', noremap)
 -- redo
@@ -24,10 +28,10 @@ map('n', '<C-L>', '<C-W>l', noremap)
 map('n', '<C-H>', '<C-W>h', noremap)
 
 -- Resizing-splits
-map('n', '<silent> <C-Up>', ':resize +10<CR>', noremap)
-map('n', '<silent> <C-Down>', ':resize -10<CR>', noremap)
-map('n', '<silent> <C-Right>', ':vertical resize +10<CR>', noremap)
-map('n', '<silent> <C-Left>', ':vertical resize -10<CR>', noremap)
+map('n', '<M-Up>', ':resize +10<CR>', noremap)
+map('n', '<M-Down>', ':resize -10<CR>', noremap)
+map('n', '<M-Right>', ':vertical resize +10<CR>', noremap)
+map('n', '<M-Left>', ':vertical resize -10<CR>', noremap)
 
 -- autoreloading config file
 map('n', 'nve', ':e $MYVIMRC', noremap)

@@ -10,7 +10,7 @@ map('n', '<F3>', ':NvimTreeToggle<CR>', noremap)
 -- Compe
 -- map("i", "<CR>", "compe#confirm('<CR>')", { expr = true })
 map('i', '<silent><expr><C-f>', 'compoe#scroll({ delta : +4 })', noremap)
-map('i', '<silent><expr><C-b>', 'compoe#scroll({ delta : +4 })', noremap)
+map('i', '<silent><expr><C-d>', 'compoe#scroll({ delta : +4 })', noremap)
 
 -- Telescope
 map('n', '<leader>ff', ":Telescope find_files<cr>", noremap)
@@ -19,30 +19,22 @@ map('n', '<leader>ft', ":Telescope live_grep<cr>", noremap)
 
 -- Barbar
 -- Move to previous/next
-map('n', '<A-,>', ':BufferPrevious<CR>', opts)
-map('n', '<A-.>', ':BufferNext<CR>', opts)
+map('n', '<A-,>', ':tabprevious<CR>', opts)
+map('n', '<A-.>', ':tabnext<CR>', opts)
 -- Re-order to previous/next
-map('n', '<A-<>', ':BufferMovePrevious<CR>', opts)
+map('n', '<A-<>', ':tabmove<CR>', opts)
 map('n', '<A->>', ' :BufferMoveNext<CR>', opts)
 -- Goto buffer in position...
-map('n', '<A-1>', ':BufferGoto 1<CR>', opts)
-map('n', '<A-2>', ':BufferGoto 2<CR>', opts)
-map('n', '<A-3>', ':BufferGoto 3<CR>', opts)
-map('n', '<A-4>', ':BufferGoto 4<CR>', opts)
-map('n', '<A-5>', ':BufferGoto 5<CR>', opts)
-map('n', '<A-6>', ':BufferGoto 6<CR>', opts)
-map('n', '<A-7>', ':BufferGoto 7<CR>', opts)
-map('n', '<A-8>', ':BufferGoto 8<CR>', opts)
-map('n', '<A-9>', ':BufferGoto 9<CR>', opts)
-map('n', '<A-0>', ':BufferLast<CR>', opts)
--- Close buffer
-map('n', '<A-c>', ':BufferClose<CR>', opts)
--- Magic buffer-picking mode
-map('n', '<C-s>', ':BufferPick<CR>', opts)
--- Sort automatically by...
-map('n', '<Space>bb', ':BufferOrderByBufferNumber<CR>', opts)
-map('n', '<Space>bd', ':BufferOrderByDirectory<CR>', opts)
-map('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
+map('n', '<A-1>', ':tabn 1<CR>', opts)
+map('n', '<A-2>', ':tabn 2<CR>', opts)
+map('n', '<A-3>', ':tabn 3<CR>', opts)
+map('n', '<A-4>', ':tabn 4<CR>', opts)
+map('n', '<A-5>', ':tabn 5<CR>', opts)
+map('n', '<A-6>', ':tabn 6<CR>', opts)
+map('n', '<A-7>', ':tabn 7<CR>', opts)
+map('n', '<A-8>', ':tabn 8<CR>', opts)
+map('n', '<A-9>', ':tabn 9<CR>', opts)
+map('n', '<A-0>', ':tablast<CR>', opts)
 
 -- Kommentry
 map("n", "<leader>cic", "<Plug>kommentary_line_increase", {})
@@ -78,3 +70,43 @@ map("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 map("n", "<leader>gs", ":G<CR>", opts)
 map("n", "<leader>gh", ":diffget //2<CR>", opts)
 map("n", "<leader>gl", ":diffget //3<CR>", opts)
+
+-- Git signs
+map('n', '<leader>hp', '<cmd>Gitsigns preview_hunk<CR>', opts)
+map('n', '<leader>hr', ':Gitsigns reset_hunk<CR>', opts)
+map('n', '<leader>hd', '<cmd>Gitsigns diffthis<CR>', opts)
+
+-- LuaSnip
+local has_words_before = function()
+  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+end
+
+local luasnip = require("luasnip")
+local cmp = require("cmp")
+
+cmp.setup({
+  mapping = {
+    ["<Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      elseif has_words_before() then
+        cmp.complete()
+      else
+        fallback()
+      end
+    end, { "i", "s" }),
+
+    ["<S-Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { "i", "s" }),
+  },
+})

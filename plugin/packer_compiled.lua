@@ -74,16 +74,6 @@ _G.packer_plugins = {
     path = "/home/psycoder01/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  UltiSnips = {
-    loaded = true,
-    path = "/home/psycoder01/.local/share/nvim/site/pack/packer/start/UltiSnips",
-    url = "https://github.com/vim-scripts/UltiSnips"
-  },
-  ["barbar.nvim"] = {
-    loaded = true,
-    path = "/home/psycoder01/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-    url = "https://github.com/romgrk/barbar.nvim"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/psycoder01/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -213,6 +203,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/psycoder01/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["presence.nvim"] = {
+    loaded = true,
+    path = "/home/psycoder01/.local/share/nvim/site/pack/packer/start/presence.nvim",
+    url = "https://github.com/andweeb/presence.nvim"
   },
   rainbow = {
     loaded = true,

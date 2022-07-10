@@ -8,7 +8,7 @@ local setupGitSigns = function()
             virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
             delay = 1000
         },
-        current_line_blame_formatter_opts = {relative_time = true}
+        current_line_blame_formatter_opts = {relative_time = true},
     }
 end
 
