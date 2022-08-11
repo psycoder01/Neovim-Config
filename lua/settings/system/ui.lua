@@ -22,3 +22,5 @@ vim.o.autoindent = true
 -- Split panes position
 vim.o.splitbelow = true
 vim.o.splitright = true
+
+vim.o.background = "dark"

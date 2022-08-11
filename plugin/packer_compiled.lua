@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/psycoder01/.local/share/nvim/site/pack/packer/start/formatter.nvim",
     url = "https://github.com/mhartington/formatter.nvim"
   },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/psycoder01/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/psycoder01/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -234,20 +239,10 @@ _G.packer_plugins = {
     path = "/home/psycoder01/.local/share/nvim/site/pack/packer/start/vim-prettier",
     url = "https://github.com/prettier/vim-prettier"
   },
-  ["vim-react-snippets"] = {
-    loaded = true,
-    path = "/home/psycoder01/.local/share/nvim/site/pack/packer/start/vim-react-snippets",
-    url = "https://github.com/mlaursen/vim-react-snippets"
-  },
   ["vim-sneak"] = {
     loaded = true,
     path = "/home/psycoder01/.local/share/nvim/site/pack/packer/start/vim-sneak",
     url = "https://github.com/justinmk/vim-sneak"
-  },
-  ["vim-snippets"] = {
-    loaded = true,
-    path = "/home/psycoder01/.local/share/nvim/site/pack/packer/start/vim-snippets",
-    url = "https://github.com/honza/vim-snippets"
   }
 }
 
