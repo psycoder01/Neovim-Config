@@ -78,5 +78,7 @@ return require('packer').startup(function()
     use 'airblade/vim-gitgutter'
     -- Discord Rich Presence
     use 'andweeb/presence.nvim'
+    -- Copyright Writer
+    use 'nine2/vim-copyright'
 
 end)

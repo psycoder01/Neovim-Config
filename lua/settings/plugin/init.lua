@@ -17,6 +17,7 @@ require('settings.plugin.gitsigns')
 require('settings.plugin.nvim_tree')
 require('settings.plugin.nvim_metals')
 require('settings.plugin.presence')
+require('settings.plugin.cpywrite')
 -- require('settings.plugin.lsputils')
 
 -- Initialize Plugins
