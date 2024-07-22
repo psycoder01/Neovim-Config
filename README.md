@@ -1,2 +1,3 @@
-# Neovim-Config
-Neovim configs in lua for better experience and productivity
+# NeoVIM Configuration
+
+Custom configs based on NvChad. Do check the https://github.com/NvChad/nvcommunity
